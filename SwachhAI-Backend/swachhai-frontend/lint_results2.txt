@@ -1,0 +1,28 @@
+
+> swachhai-frontend@0.0.0 lint
+> eslint .
+
+
+C:\Users\jeetx\Downloads\SwachhAI-Backend\SwachhAI-Backend\swachhai-frontend\src\App.tsx
+  71:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\jeetx\Downloads\SwachhAI-Backend\SwachhAI-Backend\swachhai-frontend\src\App.tsx:71:5
+  69 |
+  70 |   useEffect(() => {
+> 71 |     fetchData();
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  72 |     const interval = setInterval(fetchData, 5000);
+  73 |     return () => clearInterval(interval);
+  74 |   }, []);  react-hooks/set-state-in-effect
+
+C:\Users\jeetx\Downloads\SwachhAI-Backend\SwachhAI-Backend\swachhai-frontend\src\context\AuthContext.tsx
+  106:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+Γ£û 2 problems (2 errors, 0 warnings)
+
