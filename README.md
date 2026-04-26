@@ -27,7 +27,7 @@ The platform connects ESP32-based IoT sensor nodes installed in public washrooms
 - 🚨 **Automated SOS alerting** via physical panic buttons and scream detection (I2S microphone)
 - 📲 **Instant Telegram notifications** to cleaning workers in Hindi
 - 📊 **Predictive maintenance** using linear-regression-based resource depletion forecasting
-- 🗺️ **Public Washroom Finder** with Leaflet maps for citizens
+- 🗺️ **Public Washroom Finder** with Google maps for citizens
 - 🏆 **Leaderboard & Notice System** for officer accountability
 
 ---
